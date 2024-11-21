@@ -9,3 +9,87 @@
 @white: hsl(0, 0%, 100%);
 @black: hsl(0, 0%, 0%);
 
+//mixin
+.rounded {
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.highlight {
+    color: @yellow500;
+}
+
+:root {
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    color: @black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+background-color: gray;
+}
+
+main.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.25rem 0.75rem;
+    
+    .title {
+        background-color: @purple500;
+        color: @white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .rounded();
+
+        h1 {
+            font-weight: 500;
+            text-align: center;
+
+            span {
+                .highlight();
+            }
+        }
+        img {
+            width: 50%;
+        }
+    }
+    .account {
+        background-color: @white;
+        .rounded();
+    }
+    .consistent {
+        background-color: @yellow500;
+        .rounded();
+    }
+    .optimize-schedule {
+        background-color: @purple100;
+        .rounded();
+    }
+    .follower {
+        background-color: @purple500;
+        color: @white;
+        .rounded();
+    }
+    .growth {
+        background-color: @white;
+        .rounded();
+    }
+    .quick {
+        background-color: @yellow100;
+        .rounded();
+    }
+    .write {
+        background-color: @yellow500;
+        .rounded();
+    }
+}
