@@ -133,10 +133,15 @@ main.wrapper {
             text-align: center;
         }
 
-        img {
+        div.optimize-wrapper {
             width: 100%;
             margin: 1rem 0;
+
+            img {
+                width: 100%;
+            }
         }
+
 
         p {
             text-align: center;
@@ -149,11 +154,11 @@ main.wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
         .rounded();
 
         img {
             width: 70%;
-            margin-bottom: 1.5rem;
         }
 
         h2 {
@@ -249,15 +254,61 @@ main.wrapper {
         .optimize-schedule {
             grid-column: 3;
             grid-row: 1 / 3;
+            position: relative;
+
+            h3 {
+                text-align: start;
+            }
+
+            div.optimize-wrapper {
+                position: relative;
+                width: calc(100% + 1rem);
+                height: 52.5%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: left;
+                }
+            }
+
+            p {
+                text-align: start;
+            }
         }
 
         .follower {
             grid-column: 2 / 4;
             grid-row: 3;
+            flex-direction: row;
+            justify-content: space-between;
+
+            h2 {
+                text-align: start;
+            }
+        }
+
+        .quick {
+            grid-column: 3;
         }
 
         .write {
-            grid-column: 2 / 4;
+            grid-column: 1 / 3;
+            grid-row: 4;
+            display: flex;
+            justify-content: space-between;
+
+            h2 {
+                flex-basis: 40%;
+            }
+
+            img {
+                width: 40%;
+                object-fit: contain;
+                object-position: bottom;
+                margin-top: 0;
+            }
         }
     }
 }
