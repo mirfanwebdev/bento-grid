@@ -315,6 +315,17 @@ main.wrapper {
 }
 
 @media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
     main.wrapper {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(9, 1fr);
@@ -350,16 +361,29 @@ main.wrapper {
         .growth {
             grid-column: 2;
             grid-row: 7 / span 3;
+
+            img {
+                width: 100%;
+            }
         }
 
         .quick {
             grid-column: 1;
             grid-row: 1 / span 4;
+
+            img {
+                width: 80%;
+            }
         }
 
         .write {
             grid-column: 1;
-            grid-row: 5 / span 6;
+            grid-row: 5 / span 5;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
         }
     }
 }
