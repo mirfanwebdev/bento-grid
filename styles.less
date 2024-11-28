@@ -33,7 +33,7 @@
 }
 
 body {
-background-color: aliceblue;
+background-color: ghostwhite;
 }
 
 h1 {
@@ -195,6 +195,7 @@ main.wrapper {
             margin: 1rem 0;
         }
     }
+
     .write {
         background-color: @yellow500;
         .rounded();
@@ -313,3 +314,52 @@ main.wrapper {
     }
 }
 
+@media screen and (min-width: 1280px) {
+    main.wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-auto-rows: 0;
+        margin: 4rem 6rem;
+
+        .title {
+            grid-column: 2 / span 2;
+            grid-row: 1 / span 3;
+
+        }
+
+        .account {
+            grid-column: 2;
+            grid-row: 4 / span 3;
+        }
+
+        .consistent {
+            grid-column: 3;
+            grid-row: 4 / span 3;
+        }
+
+        .optimize-schedule {
+            grid-column: 4;
+            grid-row: 1 / span 6;
+        }
+
+        .follower {
+            grid-column: 3 / span 2;
+            grid-row: 7 / span 3;
+        }
+
+        .growth {
+            grid-column: 2;
+            grid-row: 7 / span 3;
+        }
+
+        .quick {
+            grid-column: 1;
+            grid-row: 1 / span 4;
+        }
+
+        .write {
+            grid-column: 1;
+            grid-row: 5 / span 6;
+        }
+    }
+}
